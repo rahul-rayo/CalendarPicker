@@ -56,7 +56,14 @@ export default function Month(props) {
   return (
     <View style={[styles.monthContainer]}>
       {!monthOutOfRange ?
-        <TouchableOpacity
+        <TouchableOpacity style={{
+          backgroundColor: MONTHS[new Date().getMonth()] === monthName ? '#ccc' : 'white', borderRadius: 11,
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          paddingVertical: 4,
+          paddingHorizontal: 4
+        }}
           onPress={onSelect}>
           <Text style={[styles.monthText, textStyle]}>
             {monthName}
