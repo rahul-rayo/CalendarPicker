@@ -37,6 +37,8 @@ export default function Year(props) {
     yearIsBeforeMin = year < getYear(minDate);
   }
 
+  const current = new Date().getFullYear();
+
   // ToDo: disabledYears props to disable years separate from disabledDates
 
   yearOutOfRange = yearIsAfterMax || yearIsBeforeMin || yearIsDisabled;
@@ -57,7 +59,14 @@ export default function Year(props) {
   return (
     <View style={[styles.yearContainer]}>
       {!yearOutOfRange ?
-        <TouchableOpacity
+        <TouchableOpacity style={{
+          backgroundColor: current === year ? '#ccc' : 'white', borderRadius: 11,
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          paddingVertical: 4,
+          paddingHorizontal: 4
+        }}
           onPress={onSelect}>
           <Text style={[styles.yearText, textStyle]}>
             {year}
