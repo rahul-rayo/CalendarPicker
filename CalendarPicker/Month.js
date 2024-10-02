@@ -61,8 +61,8 @@ export default function Month(props) {
           flex: 1,
           alignItems: "center",
           justifyContent: "center",
-          paddingVertical: 4,
-          paddingHorizontal: 4
+          width: 50,
+          height: 20
         }}
           onPress={onSelect}>
           <Text style={[styles.monthText, textStyle]}>
