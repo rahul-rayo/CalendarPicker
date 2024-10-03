@@ -58,7 +58,7 @@ export default function Month(props) {
       {!monthOutOfRange ?
         <TouchableOpacity style={{
           backgroundColor: MONTHS[new Date().getMonth()] === monthName ? '#ccc' : 'white', borderRadius: 11,
-          flex: 1,
+          // flex: 1,
           alignItems: "center",
           justifyContent: "center",
           width: 50,

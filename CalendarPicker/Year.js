@@ -61,11 +61,11 @@ export default function Year(props) {
       {!yearOutOfRange ?
         <TouchableOpacity style={{
           backgroundColor: current === year ? '#ccc' : 'white', borderRadius: 11,
-          flex: 1,
+          // flex: 1,
           alignItems: "center",
           justifyContent: "center",
-          paddingVertical: 4,
-          paddingHorizontal: 4
+          width: 50,
+          height: 20
         }}
           onPress={onSelect}>
           <Text style={[styles.yearText, textStyle]}>
