@@ -210,7 +210,7 @@ export default function Day(props) {
             disabled={!enableDateChange}
             style={[custom.style, computedSelectedDayStyle, selectedDayStyle]}
             onPress={() => onPressDay({ year, month, day })}>
-            <Text style={[styles.dayLabel, textStyle, custom.textStyle, selectedDayTextStyle]}>
+            <Text style={[styles.dayLabel, textStyle, custom.textStyle, selectedDayTextStyle, { width: 50 }]}>
               {day}
             </Text>
           </TouchableOpacity>
